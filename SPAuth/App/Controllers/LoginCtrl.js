@@ -1,6 +1,6 @@
 ﻿angular.module('app')
 .controller('LoginCtrl', ['$scope', 'security', function ($scope, Security) {
-	Security.redirectAuthenticated('/');
+	Security.redirectAuthenticated('/createblrb');
 	var LoginModel = function () {
 		return {
 			username: '',

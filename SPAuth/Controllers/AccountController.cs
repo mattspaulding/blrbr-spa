@@ -354,7 +354,7 @@ namespace SPAuth.Controllers
                             var response = Request.CreateResponse(HttpStatusCode.Moved);
                             response.Headers.Location = uri;
                             throw new HttpResponseException(response);
-                            
+
                         }
                         //else
                         //{
@@ -382,7 +382,7 @@ namespace SPAuth.Controllers
 
                     await RegisterExternal(new RegisterExternalBindingModel { UserName = loginInfo.DefaultUserName });
                     return await GetExternalLogin("Twitter", null);
-                           }
+            }
         }
 
         // GET api/Account/ExternalLogins?returnUrl=%2F&generateState=true
@@ -472,7 +472,7 @@ namespace SPAuth.Controllers
                          redirect_uri = new Uri(Request.RequestUri, "//" + Request.Headers.Host).AbsoluteUri,
                      });
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
-                response.Headers.Location = new Uri( uri);
+                response.Headers.Location = new Uri(uri);
                 throw new HttpResponseException(response);
             }
             else
@@ -589,11 +589,11 @@ namespace SPAuth.Controllers
 
                 return false;
             }
-            
+
             TwitterService service = new TwitterService(ConfigurationManager.AppSettings["token_ConsumerKey"], ConfigurationManager.AppSettings["token_ConsumerSecret"]);
             service.AuthenticateWith(userProfile.AccessToken, userProfile.AccessTokenSecret);
             TwitterUser user = service.VerifyCredentials(new VerifyCredentialsOptions());
-            if(user==null)
+            if (user == null)
             {
                 userProfile.AccessToken = null;
                 userProfile.AccessTokenSecret = null;
@@ -612,7 +612,7 @@ namespace SPAuth.Controllers
             var friendIds = service.ListFriendIdsOf(new ListFriendIdsOfOptions { UserId = user.Id });
             var followerIds = service.ListFollowerIdsOf(new ListFollowerIdsOfOptions { UserId = user.Id });
 
-          
+
             userProfile.Name = user.Name;
             userProfile.ScreenName = user.ScreenName;
             userProfile.ProfileImageUrlNormal = user.ProfileImageUrl;

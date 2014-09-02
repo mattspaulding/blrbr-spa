@@ -11,7 +11,7 @@
 		controller: 'DynamicCtrl'
 	})
 	.otherwise({
-		redirectTo: '/'
+		redirectTo: '/createblrb'
 	});
 }])
 .run(['$rootScope', 'security', '$route', function ($rootScope, security, $route) {
