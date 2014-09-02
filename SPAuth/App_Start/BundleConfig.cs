@@ -30,7 +30,7 @@ namespace SPAuth {
 				.IncludeDirectory("~/App/", "*.js")
 				.IncludeDirectory("~/App/Controllers", "*.js")
 				.IncludeDirectory("~/App/Directives", "*.js")
-				.IncludeDirectory("~/App/Filters", "*.js")
+				//.IncludeDirectory("~/App/Filters", "*.js")
 				.IncludeDirectory("~/App/Services", "*.js")
 				);
 
