@@ -269,10 +269,6 @@
     <Content Include="App\Controllers\ResetPasswordCtrl.js" />
     <Content Include="App\Controllers\ForgotPasswordCtrl.js" />
     <Content Include="App\Controllers\RegisterExternalCtrl.js" />
-    <Content Include="App_Data\aspnet-SPAuth.mdf" />
-    <Content Include="App_Data\aspnet-SPAuth_log.ldf">
-      <DependentUpon>aspnet-SPAuth.mdf</DependentUpon>
-    </Content>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\appstore.png" />
     <Content Include="Content\Audio_Icon.jpg" />
@@ -691,6 +687,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\Filters\" />
+    <Folder Include="App_Data\" />
     <Folder Include="Content\img\" />
     <Folder Include="Views\BlrbMvc\" />
     <Folder Include="Voice\" />
