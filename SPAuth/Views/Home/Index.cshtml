@@ -38,10 +38,13 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
+                            <a href="/createblrb" class="navbar-link">blrb</a>
+                        </li>
+                        <li>
                             <span class="navbar-text nofloat">Hello, <a href="/manage" class="navbar-link" ng-bind="security.user.userName"></a>!</span>
                         </li>
                         <li><a href="" ng-click="security.logout()">Log off</a></li>
-                    </ul>
+        </ul>
                 </div>
                 <div ng-if="!security.user" class="">
                     <ul class="nav navbar-nav navbar-right">
