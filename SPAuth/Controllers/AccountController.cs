@@ -344,7 +344,7 @@ namespace SPAuth.Controllers
                             TwitterService service = new TwitterService(ConfigurationManager.AppSettings["token_ConsumerKey"], ConfigurationManager.AppSettings["token_ConsumerSecret"]);
 
                             // This is the registered callback URL
-                            var callbackUrl = "http://" + Request.Headers.Host + "/api/Account/AuthorizeCallback/" + user.UserName;
+                            var callbackUrl = "//" + Request.Headers.Host + "/api/Account/AuthorizeCallback/" + user.UserName;
                             OAuthRequestToken requestToken = service.GetRequestToken(callbackUrl);
 
 
@@ -464,12 +464,12 @@ namespace SPAuth.Controllers
 
             if (UpdateConnections(userProfile))
             {
-                var uri = "http://" + Request.Headers.Host + Url.Route("ExternalLogin", new
+                var uri = "//" + Request.Headers.Host + Url.Route("ExternalLogin", new
                      {
                          provider = "Twitter",
                          response_type = "token",
                          client_id = Startup.PublicClientId,
-                         redirect_uri = new Uri(Request.RequestUri, "http://" + Request.Headers.Host).AbsoluteUri,
+                         redirect_uri = new Uri(Request.RequestUri, "//" + Request.Headers.Host).AbsoluteUri,
                      });
                 var response = Request.CreateResponse(HttpStatusCode.Moved);
                 response.Headers.Location = new Uri( uri);
