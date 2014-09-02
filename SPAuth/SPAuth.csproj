@@ -297,8 +297,8 @@
     <Content Include="Content\blrbr_speak.png" />
     <Content Include="Content\blrbr_twitter_header.png" />
     <Content Include="Content\coffee_cup_icon.png" />
-    <Content Include="Content\css\bootstrap.css" />
-    <Content Include="Content\css\Site.css" />
+    <Content Include="Styles\css\bootstrap.css" />
+    <Content Include="Styles\css\Site.css" />
     <Content Include="Content\features_background.png" />
     <Content Include="Content\fish_logo_group.jpg" />
     <Content Include="Content\googleplay.png" />
@@ -329,10 +329,10 @@
     <Content Include="App\Directives\confirmPassword.js" />
     <Content Include="App\Services\Alert.js" />
     <Content Include="App\Services\ErrorHandler.js" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\css\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\stylus\bootstrap\alerts.styl" />
     <Content Include="Content\stylus\bootstrap\badges.styl" />
     <Content Include="Content\stylus\bootstrap\bootstrap.styl" />
