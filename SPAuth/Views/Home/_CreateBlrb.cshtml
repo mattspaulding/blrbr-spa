@@ -1,0 +1,176 @@
+﻿@*<script src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></script>
+<script src="~/Scripts/audiodisplay.js"></script>*@
+<script src="~/Scripts/recorderjs/recorder.js"></script>
+<script src="~/Scripts/main.js"></script>
+<script>
+    var channel = "";
+    var isTweet = false;
+</script>
+@*
+
+    $('#save').hide();
+    $('#controlsGroup').hide();
+
+
+    $('#radio').click(function () {
+        $('#controlsGroup').show();
+        $('#controlsLink').hide();
+    })
+    $('#controlsLink').click(function () {
+        $('#controlsGroup').show();
+        $('#controlsLink').hide();
+    })
+
+    $('#record').click(function () {
+        $('#save').show();
+    })
+
+    $('#save').click(function () {
+        $('#save').hide();
+        $('#controlsGroup').hide();
+        $('#controlsLink').show();
+        text = $('#text').val();
+        isTweet = $('#tweetCheckbox').prop('checked');
+    })
+
+
+</script>*@
+
+
+<script type="text/ng-template" id="/createblrb">
+    <div class="container" ng-controller="CreateBlrbCtrl">
+        <div class="row">
+            <style>
+                            /*html {
+                    overflow: hidden;
+                }*/
+
+                            /*body {
+                    font: 14pt Arial, sans-serif;
+                    display: block;
+                    flex-direction: column;
+                    height: 100vh;
+                    width: 100%;
+                    margin: 0 0;
+                }*/
+
+                            canvas {
+                                display: inline-block;
+                                background: #202020;
+                                width: 95%;
+                                height: 45%;
+                                box-shadow: 0px 0px 10px blue;
+                            }
+
+                            #controls {
+                                display: block;
+                                flex-direction: row;
+                                align-items: center;
+                                justify-content: space-around;
+                                height: 20%;
+                                width: 100%;
+                            }
+
+                            #controlsLink {
+                                text-align: center;
+                            }
+
+                            #record {
+                                width: 100%;
+                            }
+
+                                #record:hover {
+                                    background: green;
+                                    background: -webkit-radial-gradient(center, ellipse cover, green 0%,white 75%,white 100%,#7db9e8 100%);
+                                }
+
+                                #record.recording {
+                                    background: red;
+                                    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,white 75%,white 100%,#7db9e8 100%);
+                                }
+
+                            #save {
+                                width: 100%;
+                            }
+
+                                #save:hover {
+                                    background: green;
+                                    background: -webkit-radial-gradient(center, ellipse cover, green 0%,white 75%,white 100%,#7db9e8 100%);
+                                }
+
+                            #radio {
+                                width: 50%;
+                            }
+
+                                #radio:hover {
+                                    background: green;
+                                    background: -webkit-radial-gradient(center, ellipse cover, green 0%,white 75%,white 100%,#7db9e8 100%);
+                                }
+
+                            #viz {
+                                height: 200px;
+                                width: 100%;
+                                display: block;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                            }
+
+                            #record :hover {
+                            }
+
+                            @@media (orientation: landscape) {
+                                body {
+                                    flex-direction: row;
+                                }
+
+                                #controls {
+                                    flex-direction: column;
+                                    height: 100%;
+                                    width: 100%;
+                                }
+
+                                #viz {
+                                    height: 200px;
+                                    width: 100%;
+                                }
+                            }
+            </style>
+            <div>
+                <div id="controlsLink">
+                    <div>
+                        <img id="radio" src="/Content/Radio_Icon_Black.png" />
+                        <div>create a blrb</div>
+                    </div>
+                </div>
+                <div id="controlsGroup">
+                    <div id="viz">
+                        <canvas id="analyser" width="1024" height="500"></canvas>
+                        <canvas id="wavedisplay" width="1024" height="500"></canvas>
+                    </div>
+                    <div id="controls" class="row">
+                        <div class="col-md-6">
+                            <img id="record" src="/Content/Mic_Icon_Black.png" onclick="toggleRecording(this)" />
+                        </div>
+                        <div class="col-md-6">
+                            <img id="save" src="/Content/Audio_Icon_Black.png" onclick="saveAudio();" />
+                        </div>
+                    </div>
+                    <div id="textEntry" class="row" style="padding-top:15px;">
+                        <div class="col-md-12">
+                            <textarea id="text">@Model</textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <input id="tweetCheckbox" type="checkbox" class="checkbox" checked="checked" />
+                        </div>
+                        <div class="col-xs-6">
+                            tweet
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
