@@ -716,7 +716,6 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\recordImg\Thumbs.db" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\_ForgotPassword.cshtml" />
     <Content Include="Views\Home\_ResetPassword.cshtml" />
