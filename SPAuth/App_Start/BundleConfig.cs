@@ -39,7 +39,7 @@ namespace SPAuth {
 			bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
 				"~/Scripts/modernizr-*"));
 
-			bundles.Add(new StyleBundle("~/Content/css").Include(
+			bundles.Add(new StyleBundle("~/Styles/css").Include(
 				 "~/Content/css/bootstrap.css",
 				 "~/Content/css/Site.css"));
 		}
